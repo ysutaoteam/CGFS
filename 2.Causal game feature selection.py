@@ -55,7 +55,7 @@ for t in range(42):
     parkinson_y = dataset.astype('float32')
 
     xx_train, x_test, yy_train, y_test = train_test_split(parkinson_x, parkinson_y, test_size=0.2, shuffle=True, random_state=86)
-    xx_train, x_val,  yy_train,  y_val = train_test_split(xx_train, yy_train, test_size=0.25, shuffle=True, random_state=83)
+    xx_train, x_val,  yy_train,  y_val = train_test_split(xx_train, yy_train, test_size=0.25, shuffle=True, random_state=86)
 
     csv = "".join(np.hstack((np.hstack(("motor-mae", t + 1)), ".csv")))
     parkinson_x = pd.read_csv(csv)
