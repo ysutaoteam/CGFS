@@ -15,8 +15,8 @@ from sklearn.metrics import mean_squared_error,r2_score,mean_absolute_error
 import math
 from sklearn.model_selection import train_test_split
 from pylab import mpl
-mpl.rcParams['font.sans-serif'] = ['SimHei'] # 指定默认字体
-mpl.rcParams['axes.unicode_minus'] = False # 解决保存图像是负号'-'显示为方块的问题
+mpl.rcParams['font.sans-serif'] = ['SimHei'] 
+mpl.rcParams['axes.unicode_minus'] = False 
 from sklearn import datasets,ensemble
 
 def train(trainx,testx,trainy,testy):
@@ -54,7 +54,7 @@ def ParkinsonLoader(path1):
     dataset = parkinson_y.values
     parkinson_y = dataset.astype('float32')
     xx_train, x_test, yy_train, y_test = train_test_split(parkinson_x, parkinson_y, test_size=0.2, shuffle=True,random_state=86)
-    x_train, x_val, y_train, y_val = train_test_split(xx_train, yy_train, test_size=0.25, shuffle=True,random_state=83)
+    x_train, x_val, y_train, y_val = train_test_split(xx_train, yy_train, test_size=0.25, shuffle=True,random_state=86)
     return x_train,x_val,  x_test, y_train,y_val, y_test
 
 def res(x1):
